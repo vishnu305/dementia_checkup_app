@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title>Dementia Diagnosis</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename = 'style.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <input id="nav-toggle" type="checkbox" />
+        <div class="logo">DEMENTIA IDENTIFICATION</div>
+        <ul class="links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/phase1">First layer</a></li>
+          <li><a href="/phase2">Second layer</a></li>
+          <li><a href="/">Contact</a></li>
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </label>
+      </nav>
+    </header>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1>COMPARISION TEST</h1>
+    <p>
+      Welcome Once Again!!We will move to the Comaparision Test.In this test,
+      patient answers for previous tests are compared to when he was well
+      suppose 5-6 years ago. The scores are given for every question and final
+      score is calculated on the basis of total score of all questions:(Yes or
+      No or Maybe) <br />
+      Please wait for sometime and relax
+    </p>
+    <form action="/phase2test5" method="POST" enctype="multiport/form-data">
+      <label>Do you forget information that you have learned recently?</label>
+      <input type="text" name="p2t5q1" />
+      <label
+        >Do you have difficulty in understanding recent things than what it used
+        to be 5-6 years ago?</label
+      >
+      <input type="text" name="p2t5q2" />
+      <label
+        >Do you have the patient have difficulty in recalling conversations of
+        few days before than he/she used to be 5-6 years ago</label
+      >
+      <input type="text" name="p2t5q3" />
+      <label>Are you able to manage medications properly</label>
+      <input type="text" name="p2t5q4" />
+      <label
+        >Are you less able to manage money and financial affairs(budget, paying
+        bills) that you used to do 5-6yrs?</label
+      >
+      <input type="text" name="p2t5q5" />
+      <label
+        >During speaking, do you find it difficult in finding the right word or
+        have the habit of using wrong words more often than what he used to do
+        few years ago?</label
+      >
+      <input type="text" name="p2t5q6" />
+      <input
+        type="text"
+        name="countforD"
+        style="display: none"
+        value="{{countforD}}"
+      />
+      <input
+        type="text"
+        name="countforSD"
+        style="display: none"
+        value="{{countforSD}}"
+      />
+      <input
+        type="text"
+        name="countforND"
+        style="display: none"
+        value="{{countforND}}"
+      />
+      <input type="submit" />
+    </form>
+  </body>
+</html>

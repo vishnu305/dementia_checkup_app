@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title>Dementia Diagnosis</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename = 'style.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <input id="nav-toggle" type="checkbox" />
+        <div class="logo">DEMENTIA IDENTIFICATION</div>
+        <ul class="links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/phase1">First layer</a></li>
+          <li><a href="/phase2">Second layer</a></li>
+          <li><a href="/">Contact</a></li>
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </label>
+      </nav>
+    </header>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="container">
+      <p>Here is the puzzle.Please take some time and answer it in one word</p>
+      <img src="{{ url_for('static',filename = 'Odd.jpeg')}}" />
+    </div>
+    <form
+      action="/phase1test2part3"
+      method="POST"
+      enctype="multiport/form-data"
+    >
+      <label>Enter your response(1 or 2 or 3):</label>
+      <input type="text" name="p1t2p3" />
+      <input
+        type="text"
+        value="{{count}}"
+        name="count1"
+        style="display: none"
+      />
+      <input type="submit" />
+    </form>
+  </body>
+</html>

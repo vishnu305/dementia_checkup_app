@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title>Dementia Diagnosis</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename = 'style.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <input id="nav-toggle" type="checkbox" />
+        <div class="logo">DEMENTIA IDENTIFICATION</div>
+        <ul class="links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/phase1">First layer</a></li>
+          <li><a href="/phase2">Second layer</a></li>
+          <li><a href="/">Contact</a></li>
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </label>
+      </nav>
+    </header>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1>MEMORY TEST</h1>
+    <p>
+      Welcome to next test Again!!Now we are going to the last test of the whole
+      process and that is Memory Test In this test ,you have to answer 15
+      true/false questions which are useful in checking if your brain is
+      functioning properly and If any doubt is there then the patient or the
+      family can decide whether to consider changes in the lifestyle or you
+      should consult your doctor(Yes/No or True/False).
+    </p>
+    <form action="/phase2test6" method="POST" enctype="multiport/form-data">
+      <label
+        >Does it take you longer time now for learning things than it used to
+        take?</label
+      >
+      <input type="text" name="p2t6q1" />
+      <label>More frequently do you forget the day of week?</label>
+      <input type="text" name="p2t6q2" />
+      <label>Sometimes do you forget what you were looking for?</label>
+      <input type="text" name="p2t6q3" />
+      <label
+        >Did your family and your friends think that you are becoming more
+        forgetful than before?</label
+      >
+      <input type="text" name="p2t6q4" />
+      <label>Sometimes do you forget names of your friends?</label>
+      <input type="text" name="p2t6q5" />
+      <label
+        >Do you find it hard to add two-digit numbers without writing
+        them?</label
+      >
+      <input type="text" name="p2t6q6" />
+      <label
+        >Do you frequently miss appointments because you forget them?</label
+      >
+      <input type="text" name="p2t6q7" />
+      <label>Do you rarely feel energetic?</label>
+      <input type="text" name="p2t6q8" />
+      <label>Do the small problems trouble you more?</label>
+      <input type="text" name="p2t6q9" />
+      <label
+        >Sometimes it I hard for you to concentrate for even an hour?</label
+      >
+      <input type="text" name="p2t6q10" />
+      <label
+        >Do you frequently misplace your keys and when you try to find then you
+        can’t remember where have you placed your keys?</label
+      >
+      <input type="text" name="p2t6q11" />
+      <label>Do you frequently repeat yourself?</label>
+      <input type="text" name="p2t6q12" />
+      <label
+        >Sometimes do you get lost while driving even knowing the route because
+        earlier you have been there?</label
+      >
+      <input type="text" name="p2t6q13" />
+      <label
+        >Sometimes do you forget the point that you were trying to make?</label
+      >
+      <input type="text" name="p2t6q14" />
+      <label>Do you depend on Caffeine so that you feel mentally sharp?</label>
+      <input type="text" name="p2t6q15" />
+      <input
+        type="text"
+        name="countforD"
+        style="display: none"
+        value="{{countforD}}"
+      />
+      <input
+        type="text"
+        name="countforSD"
+        style="display: none"
+        value="{{countforSD}}"
+      />
+      <input
+        type="text"
+        name="countforND"
+        style="display: none"
+        value="{{countforND}}"
+      />
+      <input type="submit" />
+    </form>
+  </body>
+</html>

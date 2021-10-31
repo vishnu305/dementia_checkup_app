@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title>Dementia Diagnosis</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename = 'style.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <input id="nav-toggle" type="checkbox" />
+        <div class="logo">DEMENTIA IDENTIFICATION</div>
+        <ul class="links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/phase1">First layer</a></li>
+          <li><a href="/phase2">Second layer</a></li>
+          <li><a href="/">Contact</a></li>
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </label>
+      </nav>
+    </header>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1>Final Report</h1>
+    <p>
+      Hello patient, Your Virtual Dementia Report is as folllows:<br />
+      No of tests in which you have got the report as Having Dementia
+      {{countforD}}<br />
+      No of tests in which you have got the report as Symptoms of Having
+      Dementia {{countforSD}}<br />
+      No of tests in which you have got the report as Not Having Dementia
+      {{countforND}}<br />
+    </p>
+    {% if countforD>=countforND and countforD>=countforND %}
+    <p>
+      You are suffering from acute Dementia.Kindly consult your doctor as soon
+      as possible .Please don't do any delay otherwise it might result into
+      Alzheimers which will make your life even worse than before
+    </p>
+    {% elif countforSD>=countforD and countforSD>=countforND %}
+    <p>
+      You are having symptoms of Dementia. You should do some changes in your
+      lifestyle like Exercise and physical activity can have lots of benefits
+      for people with dementia. It can help regulate their sleep and prevent
+      restlessness and sleeplessness in the evening. It can also help maintain a
+      positive mood and lower the risk of them developing depression.
+    </p>
+    {% else %}
+    <p>You are not suffering from Dementia and you are perfectly fine</p>
+    {% endif %}
+    <a href="/">Go to Home</a>
+  </body>
+</html>

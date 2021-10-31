@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title>Dementia Diagnosis using ML</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename = 'style.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <input id="nav-toggle" type="checkbox" />
+        <div class="logo"><strong>D</strong>ementia</div>
+        <ul class="links">
+          <li><a href="#1">Home</a></li>
+          <li><a href="#2">About</a></li>
+          <li><a href="/prediction">Prediction</a></li>
+          <li><a href="#4">Contact</a></li>
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </label>
+      </nav>
+    </header>
+    <div id=1 class="background1">
+      <h1>Welcome to Dementia Classification Website</h1>
+    </div>
+    <div id=2 class="frontpageclass">
+      <h1
+        style="
+          text-align: center;
+          font-size: 50px;
+          font-weight: bold;
+          padding: 80px;
+        "
+      >
+        About Dementia
+      </h1>
+      <div
+        style="
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          align-items: center;
+        "
+      >
+        <img
+          src="{{ url_for('static',filename = "imgdemen1.png")}}"
+          alt="image2"
+          style="width: 400px; height: 400px"
+        />
+        <p style="width: 60%; font-size: 25px">
+          Dementia is not a specific disease. It’s an overall term that
+          describes a group of symptoms associated with a decline in memory or
+          other thinking skills severe enough to reduce a person’s ability to
+          perform everyday activities. Alzheimer’s disease accounts for 60 to 80
+          percent of cases. Vascular dementia, which occurs after a stroke, is
+          the second most common dementia type. But there are many other
+          conditions that can cause symptoms of dementia, including some that
+          are reversible, such as thyroid problems and vitamin deficiencies.<br /><br />
+          Dementia is a general term for loss of memory and other mental
+          abilities severe enough to interfere with daily life. It is caused by
+          physical changes in the brain. Alzheimer's is the most common type of
+          dementia, but there are many kinds.
+        </p>
+      </div>
+    </div>
+    <div class="image2class"></div>
+    <div class="content2">
+      <h1
+        style="
+          text-align: center;
+          font-size: 50px;
+          font-weight: bold;
+          padding: 20px;
+          padding-bottom: 40px;
+        "
+      >
+        Alzheimer
+      </h1>
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          align-items: center;
+        "
+      >
+        <img
+          style="width: 450px; height: 400px"
+          src="{{ url_for('static',filename = 'imgdemen4.jpg')}}"
+          alt="img4"
+        />
+        <p style="width: 50%; font-size: 18px">
+          Alzheimer's is a type of dementia that causes problems with memory,
+          thinking and behavior. Symptoms usually develop slowly and get worse
+          over time, becoming severe enough to interfere with daily tasks.
+          Alzheimer's is not a normal part of aging. The greatest known risk
+          factor is increasing age, and the majority of people with Alzheimer's
+          are 65 and older. But Alzheimer's is not just a disease of old age.
+          Approximately 200,000 Americans under the age of 65 have younger-onset
+          Alzheimer’s disease (also known as early-onset Alzheimer’s).
+          <br />
+          <br />
+          Alzheimer's is the sixth leading cause of death in the United States.
+          Those with Alzheimer's live an average of eight years after their
+          symptoms become noticeable to others, but survival can range from four
+          to 20 years, depending on age and other health conditions.
+          <br />
+          <br />
+          Alzheimer's has no current cure, but treatments for symptoms are
+          available and research continues. Although current Alzheimer's
+          treatments cannot stop Alzheimer's from progressing, they can
+          temporarily slow the worsening of dementia symptoms and improve
+          quality of life for those with Alzheimer's and their caregivers.
+          Today, there is a worldwide effort under way to find better ways to
+          treat the disease, delay its onset, and prevent it from developing.
+        </p>
+      </div>
+      <h1 style="text-align: center; font-size: 40px; margin: 40px">
+        Stages of Dementia Diagnosis:
+      </h1>
+      <ol type="i">
+        <li>
+          Evaluating Medical History
+          <ul>
+            <li>
+              We can add an automated cognitive test which analyses the facial
+              emotion of subject based on some intuitive questions, and closely
+              examine the facial expressions of subject, and whether there is
+              any facial expression deficits present.
+            </li>
+            <li>
+              For example, if the subject is being probed about a particular
+              question, how is the subject reacting with respect to his facial
+              expressions. What facial emotions is the subject conveying?
+            </li>
+          </ul>
+        </li>
+        <li>Physical Examination</li>
+        <li>Neurological Tests</li>
+      </ol>
+      <h1 style="text-align: center; font-size: 40px; margin: 40px">
+        Clinical info used for the Dementia Progression Analysis:
+      </h1>
+      <ul>
+        <li>
+          MMSE - Mini-Mental State Examination score (range is from 0 = worst to
+          30 = best) Any score greater than or equal to 24 points (out of 30)
+          indicates a normal cognition. Below this, scores can indicate severe
+          (≤9 points), moderate (10–18 points) or mild (19–23 points) cognitive
+          impairment.
+        </li>
+        <li>
+          CDR - Clinical Dementia Rating (0 = no dementia, 0.5 = very mild AD, 1
+          = mild AD, 2 = moderate AD, 3 = severe AD)
+        </li>
+        <li>Derived anatomic volumes</li>
+        <li>eTIV - Estimated total intracranial volume, mm3</li>
+        <li>
+          nWBV - Normalized whole-brain volume, expressed as a percent of all
+          voxels in the atlas-masked image that are labeled as gray or white
+          matter by the automated tissue segmentation process
+        </li>
+        <li>
+          ASF - Atlas scaling factor (unitless). Computed scaling factor that
+          transforms native-space brain and skull to the atlas target (i.e., the
+          determinant of the transform matrix)
+        </li>
+      </ul>
+    </div>
+    <div class="facediv1">
+      <h1>Facial Emotion Recognition</h1>
+    </div>
+    <div class="content3">
+      <h1 style="text-align: center; font-size: 40px; margin: 40px">
+        Facial Emotion Recognition of Dementia Patients using Machine Learning:
+      </h1>
+      <p style="font-size: 25px">
+        Underdiagnosis is one of a number of deficiencies in both diagnosis and
+        management of dementia in the primary care setting. Cognitive deficits
+        can be detected several years before the clinical diagnosis of dementia.
+        The neuropsychological profile may indicate the underlying
+        neuropathology.
+      </p>
+      <h1>Early Diagnosis of dementia can be classified as:</h1>
+      <br />
+      <ul>
+        <li>
+          First determine the memory disorder, not specifically related to
+          memory complaint.
+        </li>
+        <li>
+          Classifying the memory disorder and examine other cognitive/non
+          cognitive functions.
+        </li>
+      </ul>
+      <br />
+      <h1>In which symptoms is dementia mainly isolated?</h1>
+      <br />
+      <p>
+        We mainly use comprehensive assessment to analyse the symptoms, but the
+        sensitivity of these assessment tools varies depending on age,
+        education, social class, living situation.
+      </p>
+      <p>
+        For early diagnosis, we can conduct something like “Active Recall” for
+        the patients. i,e: Free and Cued Selective Reminding Test (FCSRT)
+      </p>
+      <br />
+      <h1>How can we relate facial emotion to dementia?</h1>
+      <br />
+      <p>
+        The first symptom typically of dementia is impairment of recent memory:
+        poor learning and retention of information over time.
+      </p>
+      <p>
+        We can stress of important factors such as – delayed response, visual
+        discomfort
+      </p>
+      <p>
+        Dementia symptoms include memory loss, confusion, and personality and
+        behavioural changes.
+      </p>
+      <br />
+    </div>
+    <div id=4 class="footer111">
+        <div className="footer11">
+        <h1 style=" font-size: 30px; margin-bottom: 15px" >Contact</h1>
+        <div
+          style="
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px"
+          
+        >
+          <a href=""><img style="width: 20px; height: 20px" src="{{ url_for('static',filename = 'twitter.png')}}" /></a>
+          <a href=""><img style="width: 20px; height: 20px" src="{{ url_for('static',filename = 'facebook.png')}}" /></a>
+          <a href=""><img style="width: 20px; height: 20px" src="{{ url_for('static',filename = 'linkedin.png')}}" /></a>
+          <a href=""><img style="width: 20px; height: 20px" src="{{ url_for('static',filename = 'instagram.png')}}" /></a>
+        </div>
+      </div>
+      <div className="footer1">
+        <h1
+         style=" font-size: 30px; margin-bottom: 15px;text-align:center"
+        >
+          Other links
+        </h1>
+        <p style="text-align: center; margin-bottom: 10px" ><a style="text-decoration:none;color:white" href="#1">Home</a></p>
+        <p style="text-align: center; margin-bottom: 10px" ><a style="text-decoration:none;color:white" href="/prediction">Prediction</a></p>
+        <p style="text-align: center; margin-bottom: 10px" ><a style="text-decoration:none;color:white" href="#2">About</a></p>
+      </div>
+    </div>
+    <h5 style="color:white;background:rgba(255, 123, 123, 0.61);padding:20px;text-align:center;margin:0">copyright@Afrin Siddqui<h5>
+  </body>
+</html>

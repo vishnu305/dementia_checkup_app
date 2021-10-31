@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title>Dementia Diagnosis</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename = 'style.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <div class="container">
+    <header>
+      <nav>
+        <input id="nav-toggle" type="checkbox" />
+        <div class="logo">DEMENTIA IDENTIFICATION</div>
+        <ul class="links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/phase1">First layer</a></li>
+          <li><a href="/phase2">Second layer</a></li>
+          <li><a href="/">Contact</a></li>
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </label>
+      </nav>
+    </header>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1>Welcome to First layer</h1>
+    <form>
+      <div>
+        <label>Enter Your Name</label>
+        <input type="text" id="item" autofocus />
+      </div>
+      <button class="waves-effect waves-light btn" type="submit">submit</button>
+    </form>
+  </div>
+  <p class="content"></p>
+  <a class="nextpage1" href="/phase1test1"></a>
+  <script>
+    document.querySelector("form").addEventListener("submit", submitForm);
+
+    function submitForm(e) {
+      e.preventDefault();
+      const item = document.querySelector("#item").value;
+      document.querySelector(".content").innerText =
+        "Hello Patient,Welcome To the Virtual Dementia Detection System. I am Virtual Doctor. \n" +
+        "OK " +
+        item +
+        " Firstly I would like to inform you regarding the First Layer of tests that we conduct for diagnosis of Dementia are as follows: \n 1.CLOCK DRAWING Test \n 2.PUZZLE Test \n If you are able to pass First Layer of Tests then we will not move to the next Layer of Tests.And if there is a suspection or you are not able to pass the test then we will move to the second layer of tests. \n So now let's start with our first test i.e. CLOCK DRAWING TEST Clock Drawing Test: In this test, patient is asked to use a blank page in order to :- \n  * mark all the numbers to indicate the hours of a clock with equal spacing \n * mark in hands to show 10 minutes past 11(11:10). \n It is basically done to screen people who have neurological problems such as Dementia. Scores are given accordingly.\n\n In phase1-test1 you have to draw a clock diagram so now you will get a drawing sheet in which you have to draw the circle.";
+      document.querySelector(".nextpage1").innerText = "Take Phase1 test1";
+    }
+  </script>
+  <body></body>
+</html>

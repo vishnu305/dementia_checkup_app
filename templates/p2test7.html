@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title>Dementia Diagnosis</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename = 'style.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <input id="nav-toggle" type="checkbox" />
+        <div class="logo">DEMENTIA IDENTIFICATION</div>
+        <ul class="links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/phase1">First layer</a></li>
+          <li><a href="/phase2">Second layer</a></li>
+          <li><a href="/">Contact</a></li>
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </label>
+      </nav>
+    </header>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="container">
+      <p>
+        Welcome Once Again!!Now we will move to Our Last Test which is Image
+        Recognition Test.In this test you will be shown different images<br />
+        You have to recognize them and based on your recognition you will be
+        scored Let's start with the test<br />
+        Here is the image.Please take some time and recognize the image
+      </p>
+      <img
+        style="margin: 10px; width: 300px"
+        src="{{ url_for('static',filename = 'dog.jpg')}}"
+      />
+      <img
+        style="margin: 10px; width: 300px"
+        src="{{ url_for('static',filename = 'cat1.jpg')}}"
+      />
+      <img
+        style="margin: 10px; width: 300px"
+        src="{{ url_for('static',filename = 'elephant.jpg')}}"
+      />
+    </div>
+    <form action="/phase2test7" method="POST" enctype="multiport/form-data">
+      <label>Enter your response for first image:</label>
+      <input type="text" name="firstimage" />
+      <label>Enter your response for second image:</label>
+      <input type="text" name="secondimage" />
+      <label>Enter your response for third image:</label>
+      <input type="text" name="thirdimage" />
+      <input
+        type="text"
+        name="countforD"
+        style="display: none"
+        value="{{countforD}}"
+      />
+      <input
+        type="text"
+        name="countforSD"
+        style="display: none"
+        value="{{countforSD}}"
+      />
+      <input
+        type="text"
+        name="countforND"
+        style="display: none"
+        value="{{countforND}}"
+      />
+      <input type="submit" />
+    </form>
+  </body>
+</html>

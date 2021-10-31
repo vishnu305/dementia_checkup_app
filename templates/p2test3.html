@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title>Dementia Diagnosis</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename = 'style.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <input id="nav-toggle" type="checkbox" />
+        <div class="logo">DEMENTIA IDENTIFICATION</div>
+        <ul class="links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/phase1">First layer</a></li>
+          <li><a href="/phase2">Second layer</a></li>
+          <li><a href="/">Contact</a></li>
+        </ul>
+        <label for="nav-toggle" class="icon-burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </label>
+      </nav>
+    </header>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <h1>PERSONAL INFORMATION TEST</h1>
+    <p>
+      Welcome To the Next Test! We will begin this test now.Let me tell you that
+      in this test you have to tell me the answers in Yes/No format
+    </p>
+    <form action="/phase2test3" method="POST" enctype="multiport/form-data">
+      <label>Do you forget information that you have learned recently?</label>
+      <input type="text" name="p2t3q1" />
+      <label
+        >Do you have to ask for the same information again or need reminder
+        notes?</label
+      >
+      <input type="text" name="p2t3q2" />
+      <label
+        >Do you have trouble following instructions, like a recipe or
+        directions?</label
+      >
+      <input type="text" name="p2t3q3" />
+      <label
+        >Do you struggle to keep track of finances or pay bills on time?</label
+      >
+      <input type="text" name="p2t3q4" />
+      <label
+        >Do you experience visual problems, such as trouble with reading or
+        judging distance or color?</label
+      >
+      <input type="text" name="p2t3q5" />
+      <label
+        >Have you or others noticed changes in your personality, such as
+        becoming easily upset or anxious?</label
+      >
+      <input type="text" name="p2t3q6" />
+      <input
+        type="text"
+        name="countforD"
+        style="display: none"
+        value="{{countforD}}"
+      />
+      <input
+        type="text"
+        name="countforSD"
+        style="display: none"
+        value="{{countforSD}}"
+      />
+      <input
+        type="text"
+        name="countforND"
+        style="display: none"
+        value="{{countforND}}"
+      />
+      <input type="submit" />
+    </form>
+  </body>
+</html>
