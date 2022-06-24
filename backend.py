@@ -9,7 +9,7 @@ from skimage.metrics import structural_similarity
 import cv2
 import numpy as np
 
-import os
+# import os
 
 app = Flask(__name__)
 app.secret_key = "secret key"
