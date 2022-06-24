@@ -1,16 +1,13 @@
 from flask import Flask,render_template,request,flash,redirect,url_for
 from werkzeug.utils import secure_filename
-import pandas as pd
-import numpy as np
 
 from PIL import ImageTk, Image, ImageDraw
 import PIL
 from tkinter import *
-import binascii
 import datetime
 from skimage.metrics import structural_similarity
 import cv2
-
+import numpy as np
 
 import os
 
@@ -37,8 +34,8 @@ def phase1test1():
         global count
         count =0
         # save image to hard drive
-        filename = "user_input.jpg"
-        output_image.save(filename)
+        # filename = "user_input.jpg"
+        # output_image.save(filename)
         
         # with open('Image.jpg', 'rb') as f:
         #     content1 = f.read()
@@ -49,8 +46,8 @@ def phase1test1():
         # else:
         #     count=0
         image1 = cv2.imread('Image.jpg',0)
-        image2 = cv2.imread('user_input.jpg',0)
-        if orb_sim(image1,image2)*100 > 95:
+        # image2 = cv2.imread('user_input.jpg',0)
+        if orb_sim(image1,np.asarray(output_image))*100 > 95:
             count = count+1
         else:
             count = 0
@@ -87,7 +84,7 @@ def phase1test1():
     canvas.bind("<B1-Motion>", paint)
 
     # add a button to save the image
-    button=Button(text="save",command=lambda: save(master))
+    button=Button(text="submit",command=lambda: save(master))
     button.pack()
 
     master.mainloop()

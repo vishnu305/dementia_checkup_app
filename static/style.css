@@ -131,9 +131,9 @@ footer {
   justify-content: space-around;
   background-color: #b91646;
   color: white;
-  width: 99.2%;
+  /* width: 99.2%; */
   margin: 0;
   padding: 0;
-  position: absolute;
-  top: 743px;
+  /* position: absolute;
+  top: 743px; */
 }
